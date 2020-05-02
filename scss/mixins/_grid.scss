@@ -1,0 +1,61 @@
+// Grid system
+//
+// Generate semantic grid columns with these mixins.
+
+@mixin make-row($gutter: $grid-gutter-width) {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 0;
+    margin-right: $gutter / -2;
+    margin-left: $gutter / -2;
+}
+
+@mixin make-col-ready($gutter: $grid-gutter-width) {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: $gutter / 2;
+    padding-left: $gutter / 2;
+    margin-top: 0;
+}
+
+@mixin make-col($size, $columns: $grid-colums) {
+    flex: 0 0 auto;
+    width: percentage($size / $columns);
+}
+
+@mixin make-col-offset($size, $columns: $grid-colums) {
+    $num: $size / $columns;
+    margin-left: if($num != 0, percentage($num), 0);
+}
+
+// Framework grid generation
+//
+@mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+    @each $breakpoint in map-keys($breakpoints) {
+        $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+        // '.col-{size}' classes fro equal width flexbox columns
+        .col#{$infix} {
+            flex: 1 0 0%;
+        }
+
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+            @if $columns > 0 {
+                @for $i from 1 through $columns {
+                    .col#{$infix}-#{$i} {
+                        @include make-col($i, $columns);
+                    }
+                }
+
+                // '$columns - 1' because according to Bootstrap 4 offsetting by the width of an entire row isn't possible
+                @for $i from 1 through ($columns - 1) {
+                    .offset#{$infix}-#{$i} {
+                        @include make-col-offset($i, $columns);
+                    }
+                }
+            }
+        }
+    }
+}
