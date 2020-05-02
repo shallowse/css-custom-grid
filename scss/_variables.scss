@@ -18,7 +18,7 @@ $grid-breakpoints: (
 
 $container-max-widths: (
   sm: 540px,
-  md: 720px,
+  md: 768px,
   lg: 960px,
   xl: 1140px,
   xxl: 1320px
@@ -30,7 +30,3 @@ $container-max-widths: (
 
 $grid-columns:          12 !default;
 $grid-gutter-width:     1.5rem !default;
-
-// Container padding
-
-$container-padding-x:   1rem !default;
