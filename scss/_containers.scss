@@ -3,3 +3,35 @@
     @include make-container();
     @include make-container-max-widths();
 }
+
+// Responsive containers that are 100% wide until a breakpoint
+@each $breakpoint, $container-max-width in $container-max-widths {
+    .container-#{$breakpoint} {
+        @include make-container();
+    }
+
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+        %responsive-container-#{$breakpoint} {
+            max-width: $container-max-width;
+        }
+
+        // Extend each breakpoint which is '<=' to the current breakpoint
+        $extend-breakpoint: true;
+
+        @each $name, $width in $grid-breakpoints {
+            @if ($extend-breakpoint) {
+                $infix: breakpoint-infix($name, $grid-breakpoints);
+                @if ($infix != "") {
+                    .container#{$infix} {
+                        @extend %responsive-container-#{$breakpoint};
+                    }
+                }
+
+                // When the current breakpoint is reached, stop extending
+                @if ($name == $breakpoint) {
+                    $extend-breakpoint: false;
+                }
+            }
+        }
+    }
+}
