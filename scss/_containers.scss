@@ -4,6 +4,11 @@
     @include make-container-max-widths();
 }
 
+// 100% wide container at all brekpoints
+.container-fluid {
+    @include make-container();
+}
+
 // Responsive containers that are 100% wide until a breakpoint
 @each $breakpoint, $container-max-width in $container-max-widths {
     .container-#{$breakpoint} {
