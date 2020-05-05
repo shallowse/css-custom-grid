@@ -1,0 +1,42 @@
+// Loop over each breakpoint
+@each $breakpoint in map-keys($grid-breakpoints) {
+    // Generate media query if needed
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        // Loop over $utilities
+        //@debug $infix '::' $utilities;
+        @each $_, $utility in $utilities {
+            $values: map-get($utility, values);
+
+            // If the values are a list or string, convert it to a map
+            //@debug type-of($values) type-of(nth($values, 1));
+            @if type-of($values) == "string" or type-of(nth($values, 1)) != "list" {
+                $values: zip($values, $values);
+                //@debug $values;
+            }
+
+            $properties: map-get($utility, property);
+            // Account for multiple properties e.g. "property: margin-top margin-bottom"
+            // Convert single property value to list as we loop it through later on
+            @if type-of($properties) ==  "string" {
+                $properties: append((), $properties);
+                //@debug $properties type-of($properties);
+            }
+            
+            $property-class: map-get($utility, class);
+
+            @each $key, $value in $values {
+                $property-class-modifier: "-" + $key;
+                $class: $property-class + $infix + $property-class-modifier;
+                //@debug $class;
+
+                .#{$class} {
+                    @each $property in $properties {
+                        #{$property}: $value !important;
+                    }
+                }
+            }
+        }
+    }
+}

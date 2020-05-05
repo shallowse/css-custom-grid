@@ -1,0 +1,171 @@
+// Utilities map
+
+$utilities: (
+    "display": (
+        property: display,
+        class: d,
+        values: none inline inline-block block flex inline-flex,
+    ),
+    "order": (
+        property: order,
+        class: order,
+        values: (
+            first: -1,
+            0: 0,
+            1: 1,
+            2: 2,
+            3: 3,
+            4: 4,
+            5: 5,
+            last: 6
+        )
+    ),
+    // Flex utilities
+        "flex-direction":
+        (
+            property: flex-direction,
+            class: flex,
+            values: row column row-reverse column-reverse,
+        ),
+    "flex-wrap": (
+        property: flex-wrap,
+        class: flex,
+        values: wrap nowrap wrap-reverse,
+    ),
+    "justify-content": (
+        property: justify-content,
+        class: justify-content,
+        values: flex-start flex-end center space-between space-around,
+    ),
+    "align-items": (
+        property: align-items,
+        class: align-items,
+        values: flex-start flex-end center baseline stretch,
+    ),
+    "align-content": (
+        property: align-content,
+        class: align-content,
+        values: flex-start flex-end center space-between space-around stretch,
+    ),
+    "align-self": (
+        property: align-self,
+        class: align-self,
+        values: auto flex-start flex-end center baseline stretch,
+    ),
+    // Margin utilities
+        "margin":
+        (
+            property: margin,
+            class: m,
+            values:
+                map-merge(
+                    $spacers,
+                    (
+                        auto: auto,
+                    )
+                ),
+        ),
+    "margin-x": (
+        property: margin-right margin-left,
+        class: mx,
+        values:
+            map-merge(
+                $spacers,
+                (
+                    auto: auto,
+                )
+            ),
+    ),
+    "margin-y": (
+        property: margin-top margin-bottom,
+        class: my,
+        values:
+            map-merge(
+                $spacers,
+                (
+                    auto: auto,
+                )
+            ),
+    ),
+    "margin-top": (
+        property: margin-top,
+        class: mt,
+        values:
+            map-merge(
+                $spacers,
+                (
+                    auto: auto,
+                )
+            ),
+    ),
+    "margin-right": (
+        property: margin-right,
+        class: mr,
+        values:
+            map-merge(
+                $spacers,
+                (
+                    auto: auto,
+                )
+            ),
+    ),
+    "margin-left": (
+        property: margin-left,
+        class: ml,
+        values:
+            map-merge(
+                $spacers,
+                (
+                    auto: auto,
+                )
+            ),
+    ),
+    "margin-bottom": (
+        property: margin-bottom,
+        class: mb,
+        values:
+            map-merge(
+                $spacers,
+                (
+                    auto: auto,
+                )
+            ),
+    ),
+    // Padding utilities
+        "padding":
+        (
+            property: padding,
+            class: p,
+            values: $spacers,
+        ),
+    "padding-x": (
+        property: padding-right padding-left,
+        class: px,
+        values: $spacers,
+    ),
+    "padding-y": (
+        property: padding-top padding-bottom,
+        class: py,
+        values: $spacers,
+    ),
+    "padding-top": (
+        property: padding-top,
+        class: pt,
+        values: $spacers,
+    ),
+    "padding-right": (
+        property: padding-right,
+        class: pr,
+        values: $spacers,
+    ),
+    "padding-bottom": (
+        property: padding-bottom,
+        class: pb,
+        values: $spacers,
+    ),
+    "padding-left": (
+        property: padding-left,
+        class: pl,
+        values: $spacers,
+    ),
+);
