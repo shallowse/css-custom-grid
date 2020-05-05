@@ -6,53 +6,10 @@ body {
     margin: 3rem 0 0;
 }
 
-.first > div {
+.row > div {
     background-color: lightgray;
     height: 5rem;
     text-align: center;
     line-height: 5rem;
-    border-bottom: 1px solid gray;
-}
-
-@media (min-width: 576px) {
-    .first > div:nth-of-type(1),
-    .first > div:nth-of-type(2) {
-        border-right: 1px solid black;
-    }
-}
-
-.second {
-    margin-top: 2rem;
-}
-
-.second > div {
-    background-color: lightgray;
-    max-height: 5rem;
-    text-align: center;
-    line-height: 5rem;
-    border-bottom: 1px solid gray;
-}
-
-@media (min-width: 576px) {
-    .second > div:nth-of-type(1) {
-        border-right: 1px solid black;
-    }
-}
-
-.third {
-    margin-top: 2rem;
-}
-
-.third > div {
-    background-color: lightgray;
-    height: 5rem;
-    text-align: center;
-    line-height: 5rem;
-}
-
-.third > div:nth-of-type(1),
-.third > div:nth-of-type(2),
-.third > div:nth-of-type(3),
-.third > div:nth-of-type(4) {
-    border-right: 1px solid black;
+    border: 1px solid black;
 }

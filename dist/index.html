@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/custom-grid.css">
+    <!-- <link rel="stylesheet" href="css/custom-grid.min.css"> -->
     <link rel="stylesheet" href="css/main.css">
     <title>CUSTOM GRID</title>
 </head>
@@ -12,32 +13,32 @@
 <body>
     <div class="container">
         <div class="row first">
-            <div class="col-sm-4">
+            <div class="col-sm-3 mx-1">
                 One of three columns
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3 mx-1">
                 One of three columns
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3 mx-1">
                 One of three columns
             </div>
         </div>
     </div>
 
     <div class="container">
-        <div class="row second">
-            <div class="offset-sm-3 col-sm-4">col-sm-4</div>
-            <div class="col-sm-5">col-sm-5</div>
+        <div class="row second mt-2">
+            <div class="offset-sm-2 col-sm-4">col-sm-4</div>
+            <div class="col-sm-5 ml-1">col-sm-5</div>
         </div>
     </div>
 
     <div class="container">
-        <div class="row third">
-            <div class="col-sm">col-sm</div>
-            <div class="col-sm">col-sm</div>
-            <div class="col-sm">col-sm</div>
-            <div class="col-sm">col-sm</div>
-            <div class="col-sm">col-sm</div>
+        <div class="row third mt-2">
+            <div class="col-sm order-4 mx-1">col-sm orig:#1</div>
+            <div class="col-sm order-0 mx-1">col-sm orig:#2</div>
+            <div class="col-sm order-2 mx-1">col-sm orig:#3</div>
+            <div class="col-sm order-1 mx-1">col-sm orig:#4</div>
+            <div class="col-sm order-3 mx-1">col-sm orig:#5</div>
         </div>
     </div>
 </body>
