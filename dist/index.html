@@ -12,35 +12,120 @@
 
 <body>
     <div class="container">
-        <div class="row first">
-            <div class="col-sm-3 mx-1">
-                One of three columns
-            </div>
-            <div class="col-sm-3 mx-1">
-                One of three columns
-            </div>
-            <div class="col-sm-3 mx-1">
-                One of three columns
-            </div>
+        <h1>Custom grid examples</h1>
+        <p>Showcasing grid examples. Example page from <a href="https://getbootstrap.com/docs/4.4/examples/grid/"
+                alt="">getboostrap.com</a>
+        </p>
+    </div>
+
+    <div class="container">
+        <h2>Six grid tiers</h2>
+        <p>Grid tiers: none, sm, md, lg, xl, xxl</p>
+
+        <div class="row mb-1">
+            <div class="col-4">.col-4</div>
+            <div class="col-4">.col-4</div>
+            <div class="col-4">.col-4</div>
+        </div>
+
+        <div class="row mb-1">
+            <div class="col-sm-4">.col-sm-4</div>
+            <div class="col-sm-4">.col-sm-4</div>
+            <div class="col-sm-4">.col-sm-4</div>
+        </div>
+
+        <div class="row mb-1">
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4">.col-md-4</div>
+        </div>
+
+        <div class="row mb-1">
+            <div class="col-lg-4">.col-lg-4</div>
+            <div class="col-lg-4">.col-lg-4</div>
+            <div class="col-lg-4">.col-lg-4</div>
+        </div>
+
+        <div class="row mb-1">
+            <div class="col-xl-4">.col-xl-4</div>
+            <div class="col-xl-4">.col-xl-4</div>
+            <div class="col-xl-4">.col-xl-4</div>
+        </div>
+
+        <div class="row mb-1">
+            <div class="col-xxl-4">.col-xxl-4</div>
+            <div class="col-xxl-4">.col-xxl-4</div>
+            <div class="col-xxl-4">.col-xxl-4</div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <h2 class="mt-3 mb-1">Three equal columns</h2>
+        <div class="row mb-3">
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4">.col-md-4</div>
         </div>
     </div>
 
     <div class="container">
-        <div class="row second mt-2">
-            <div class="offset-sm-2 col-sm-4">col-sm-4</div>
-            <div class="col-sm-5 ml-1">col-sm-5</div>
+        <h2 class="mt-3 mb-1">Three unequal columns</h2>
+        <div class="row mb-3">
+            <div class="col-md-3">.col-md-3</div>
+            <div class="col-md-6">.col-md-6</div>
+            <div class="col-md-3">.col-md-3</div>
         </div>
     </div>
 
     <div class="container">
-        <div class="row third mt-2">
-            <div class="col-sm order-4 mx-1">col-sm orig:#1</div>
-            <div class="col-sm order-0 mx-1">col-sm orig:#2</div>
-            <div class="col-sm order-2 mx-1">col-sm orig:#3</div>
-            <div class="col-sm order-1 mx-1">col-sm orig:#4</div>
-            <div class="col-sm order-3 mx-1">col-sm orig:#5</div>
+        <h2 class="mt-3 mb-1">Two columns</h2>
+        <div class="row mb-3">
+            <div class="col-md-8">.col-md-8</div>
+            <div class="col-md-4">.col-md-4</div>
         </div>
     </div>
+
+    <div class="container">
+        <h2 class="mt-3 mb-1">Two columns with two nested columns</h2>
+        <div class="row mb-3">
+            <div class="col-md-8">
+                <div class="pb-3">
+                    .col-md-8
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-1">.col-md-6</div>
+                    <div class="col-md-6 mb-1">.col-md-6</div>
+                </div>
+            </div>
+            <div class="col-md-4">.col-md-4</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="mt-3 mb-1">Mixed: mobile, tablet, desktop</h2>
+        <div class="row mb-1">
+            <div class="col-sm-6 col-lg-8">.col-sm-6 .col-lg-8</div>
+            <div class="col-sm-6 col-lg-4">.col-sm-6 .col-lg-4</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-2 col-xl-6 col-xxl-9">.col-md-2 .col-xl-6 .col-xxl-9</div>
+            <div class="col-md-10 col-xl-6 col-xxl-3">.col-md-10 .col-xl-6 .col-xxl-3</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="mt-3 mb-1">Containers</h2>
+    </div>
+
+    <div class="container paint-container">.container</div>
+    <div class="container-sm paint-container">.container-sm</div>
+    <div class="container-md paint-container">.container-md</div>
+    <div class="container-lg paint-container">.container-lg</div>
+    <div class="container-xl paint-container">.container-xl</div>
+    <div class="container-xxl paint-container">.container-xxl</div>
+    <div class="container-fluid paint-container">.container-fluid</div>
+
 </body>
 
 </html>
